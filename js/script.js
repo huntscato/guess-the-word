@@ -20,16 +20,16 @@ const placeholder = function() {
     wordInProgress.innerText = placeholderLetters.join("");
 };
 
-holder(word);
+placeholder(word);
 
 guessButton.addEventListener("click", function(e) {
     e.preventDefault();
-    message.innerText = "";
+    guessMessage.innerText = "";
     const inputLetter = guessInput.value;
-    const goodGuess = playerInput(guess);
+    const goodGuess = playerInput(inputLetter);
 
     if (goodGuess) {
-        makeGuess(guess);
+        makeGuess(inputLetter);
     }
 
     guessInput.value = "";
@@ -40,13 +40,13 @@ const playerInput = function (input) {
     const acceptedLetter = /[a-zA-Z]/
     if (input.length === 0) {
         // If the input is empty. //
-        message.innerText = "Enter a letter!";
+        guessMessage.innerText = "Enter a letter!";
     } else if (input.length > 1) {
         // If there is more than 1 letter. //
-        message.innerText = "Only enter one letter at a time!";
+        guessMessage.innerText = "Only enter one letter at a time!";
     } else if (!input.match(acceptedLetter)) {
         // If anything other than a letter is entered. //
-        message.innerText = "Only enter a letter from A to Z!";
+        guessMessage.innerText = "Only enter a letter from A to Z!";
     } else {
         // Single letter entered. //
         return input;
@@ -60,6 +60,6 @@ const makeGuess = function (inputLetter) {
         guessedLetters.push(inputLetter);
         console.log(guessedLetters);
     }
-}
+};
     
 };
