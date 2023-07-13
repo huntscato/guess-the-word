@@ -30,7 +30,7 @@ guessButton.addEventListener("click", function(e) {
 
     if (goodGuess) {
         makeGuess(inputLetter);
-    }
+    };
 
     guessInput.value = "";
 
@@ -52,6 +52,8 @@ const playerInput = function (input) {
         return input;
     }
 
+};
+
 const makeGuess = function (inputLetter) {
     inputLetter = inputLetter.toUpperCase();
     if (guessedLetters.includes(inputLetter)) {
@@ -62,4 +64,4 @@ const makeGuess = function (inputLetter) {
     }
 };
     
-};
+
