@@ -54,7 +54,7 @@ const playerInput = function (input) {
 
 const makeGuess = function (inputLetter) {
     inputLetter = inputLetter.toUpperCase();
-    if (guessedLetters.includes(guess)) {
+    if (guessedLetters.includes(inputLetter)) {
         guessMessage.innerText = "You already guessed that letter! Try again!";
     } else {
         guessedLetters.push(inputLetter);
