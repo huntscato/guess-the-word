@@ -3,15 +3,26 @@ const guessButton = document.querySelector(".guess");
 const guessInput = document.querySelector(".letter");
 const wordInProgress = document.querySelector(".word-in-progress");
 const remainingLetters = document.querySelector(".remaining");
-const remainingGuessesSpan = document.querySelector(".remaining-span")
+const remainingGuessesSpan = document.querySelector(".remaining span")
 const guessMessage = document.querySelector (".message");
 const playAgain = document.querySelector (".play-again");
 
-const word = "magnolia";
+let word = "magnolia";
 
 const guessedLetters = [];
 
 let remainingGuesses = 8; 
+
+const getWord = async function () {
+    const retrieve = await fetch("https://gist.githubusercontent.com/skillcrush-curriculum/7061f1d4d3d5bfe47efbfbcfe42bf57e/raw/5ffc447694486e7dea686f34a6c085ae371b43fe/words.txt");
+    const words = await retrieve.text();
+    const wordArray = words.split("\n");
+    const randomWord = Math.floor(Math.random() * wordArray.length);
+    word = wordArray[randomWord].trim();
+    placeholder(word);
+}
+
+getWord();
 
 
 
@@ -111,7 +122,7 @@ const updateGuessesRemaining = function (guess) {
     } else if (remainingGuesses === 1) {
         remainingGuessesSpan.innerText = `${remainingGuesses} guess left!`;
     } else {
-        remainingGuesses.innerText = `${remainingGuesses} guesses left!`;
+        remainingGuessesSpan.innerText = `${remainingGuesses} guesses left!`;
     }
 };
 
@@ -121,7 +132,6 @@ const youWin = function () {
         guessMessage.innerHTML = `<p class="highlight"> Congratulations! You guessed the word!</p>`;
     }
 };
-
 
 
 
