@@ -65,7 +65,7 @@ const makeGuess = function (inputLetter) {
     } else {
         guessedLetters.push(inputLetter);
         console.log(guessedLetters);
-        updateGuessesRemaining(guess);
+        updateGuessesRemaining(inputLetter);
         displayGuessedLetters();
         guessInProgress(guessedLetters);
     }
@@ -107,7 +107,7 @@ const updateGuessesRemaining = function (guess) {
     }
 
     if (remainingGuesses === 0) {
-        guessMessage.innerHTML = `Goof try! The word was <span class="highlight">${word}</span>.`; 
+        guessMessage.innerHTML = `Good try! The word was <span class="highlight">${word}</span>.`; 
     } else if (remainingGuesses === 1) {
         remainingGuessesSpan.innerText = `${remainingGuesses} guess left!`;
     } else {
