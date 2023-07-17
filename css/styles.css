@@ -11,11 +11,11 @@ body {
   font-style: normal;
   font-size: 20px;
   line-height: 150%;
-  background-color: #dff6f6;
+  background-color: #C9DCAF;
   background-image: url("../img/bg.png");
   background-size: 800px;
   background-repeat: repeat;
-  color: #305050;
+  -webkit-text-fill-color: #0b9cc1;
 }
 
 .logo {
@@ -62,7 +62,7 @@ h1 {
 
 .word-in-progress {
   letter-spacing: 15px;
-  color: #28bdbd;
+  color: #63a4b5;
   font-size: 30px;
 }
 
@@ -99,13 +99,13 @@ input {
   font-size: 1.5em;
   margin-top: 0.5em;
   padding: 0.5em;
-  border: 3px solid #28bdbd;
+  border: 3px solid #ff8d81;
 }
 
 input:active,
 input:focus {
   outline: 0;
-  border: 4px solid #28bdbd;
+  border: 4px solid #aadd96;
 }
 
 .guess,
@@ -114,11 +114,11 @@ input:focus {
   border-radius: 50px;
   margin-top: 1em;
   color: #fff;
-  background: #ff8d5c;
+  background: #BF9E86;
   font-size: 1em;
   align-self: center;
-  outline: none;
-  border: 0;
+  outline: 0;
+  border: 2px solid black;
   cursor: pointer;
 }
 
@@ -129,15 +129,16 @@ input:focus {
 .guess:hover,
 .play-again:hover {
   outline: 0;
-  transform: scale(0.98);
+  transform: scale(1.10);
   background: brightness(0.3);
   color: white;
+  border: 2px solid black;
 }
 
 /* animatied background */
 .win {
   padding: 0 1em;
-  background: linear-gradient(-45deg, #ff9d64, #f5620c);
+  background: linear-gradient(-45deg, #ff9d64, #fa8947);
   background-size: 400% 400%;
   animation: gradient 2s ease infinite;
 }
