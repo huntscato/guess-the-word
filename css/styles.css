@@ -15,7 +15,7 @@ body {
   background-image: url("../img/bg.png");
   background-size: 800px;
   background-repeat: repeat;
-  color: #034343;
+  color: #c1442e;
 }
 
 .logo {
@@ -51,7 +51,7 @@ h1 {
 
 .highlight {
   padding: 0.25em;
-  background: #9bdbc1;
+  background: #6bc7a3;
   font-size: 1em;
 }
 
@@ -62,7 +62,7 @@ h1 {
 
 .word-in-progress {
   letter-spacing: 15px;
-  color: #28bdbd;
+  color: #005b96;
   font-size: 30px;
 }
 
@@ -114,7 +114,7 @@ input:focus {
   border-radius: 50px;
   margin-top: 1em;
   color: #881a0c;
-  background: #b77d2a;
+  background: #cd8500;
   font-size: 1em;
   align-self: center;
   outline: none;
